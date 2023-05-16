@@ -1,4 +1,4 @@
-Exercícios
+#Exercícios
 
 1. Escreva uma função que receba uma string como entrada e retorne um mapa onde as
 chaves são os caracteres presentes na string e os valores são o número de ocorrências
