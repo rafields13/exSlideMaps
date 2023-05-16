@@ -16,6 +16,7 @@ func charactersCount(text string) map[string]int {
 }
 
 func main() {
-	occurrences := charactersCount("Hello, world!")
+	text := "Hello, world!"
+	occurrences := charactersCount(text)
 	fmt.Print(occurrences)
 }

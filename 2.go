@@ -5,17 +5,28 @@
 
 package main
 
+import "fmt"
+
 func calculateAverage(nameGrade map[string][]float64) map[string]float64 {
 	nameAverage := make(map[string]float64)
-	sum := 0.0
 
-	for student, grade := range nameGrade {
-		sum += grades
+	for student, grades := range nameGrade {
+		sum := 0.0
+		for _, grade := range grades {
+			sum += grade
+		}
+		average := sum / float64(len(grades))
+		nameAverage[student] = average
 	}
-
-	return
+	return nameAverage
 }
 
 func main() {
-
+	nameGrade := map[string][]float64{
+		"João":   {6.5, 7, 9},
+		"Maria":  {8, 9, 10},
+		"Rafael": {10, 10, 10},
+	}
+	nameAvarege := calculateAverage(nameGrade)
+	fmt.Print(nameAvarege)
 }
