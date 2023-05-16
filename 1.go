@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-func charactersCount(text string) map[string]int {
+func charactersCounter(text string) map[string]int {
 	occurrences := make(map[string]int)
 
 	for _, character := range text {
@@ -17,6 +17,6 @@ func charactersCount(text string) map[string]int {
 
 func main() {
 	text := "Hello, world!"
-	occurrences := charactersCount(text)
+	occurrences := charactersCounter(text)
 	fmt.Print(occurrences)
 }
